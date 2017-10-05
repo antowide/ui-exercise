@@ -100,26 +100,63 @@ body {
   background: pink;
 }
 .main-header {
-  background: yellow;
+  background: #fff;
+  border-bottom: 2px solid #ccc;
+}
+.main-header .logo {
+  background: rgba(178,76,237,.2);
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  border-radius: 10px;
+  margin: 10px;
+  display: inline-block;
+  font-family: arial, sans-serif;
+  transition: all .5s ease-in-out;
+  color: #666;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.5);
+  border: 1px solid rgba(0,0,0,.2);
+  letter-spacing: 1px;
+}
+.main-header .logo:hover,
+.main-header .logo:focus {
+  background: rgba(178,76,237,.5);
+  box-shadow: 10px 10px 10px 1px rgba(0,0,0,.3);
+  transform: scale(1.1);
+  color: #000;
 }
 .main-nav {
   display: inline-block;
 }
+.main-nav ul {
+  padding-left: 0;
+}
 .main-nav li {
   display: inline-block;
   background: silver;
-  margin-left: 10px;
+  margin-left: 5px;
   padding: 0;
 }
 .main-nav li a {
   padding: 5px 10px;
   display: block;
   background: rgba(255,255,255,.8);
+  font-family: arial, sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  color: #666;
+  border-bottom: 2px solid rgba(175,74,233,.2);
 }
 .main-nav li a:hover,
 .main-nav li a:focus {
   text-decoration: none;
   background: rgba(255,255,255,1);
+}
+.main-nav li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid rgba(175,74,233,1);
 }
 .no-cssgrid main {
   display: flex; /* flex fallback if css grids are not supported */
