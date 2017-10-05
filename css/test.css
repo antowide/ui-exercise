@@ -99,6 +99,7 @@ body {
 .main-header {
     background: #fff;
     border-bottom: 2px solid #ccc;
+    position: relative;
 }
 
 .main-header .logo {
@@ -161,7 +162,11 @@ body {
     font-weight: bold;
     border-bottom: 2px solid rgba(175, 74, 233, 1);
 }
-
+.main-header .sidebar-trigger {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .no-cssgrid main {
     display: flex;
     /* flex fallback if css grids are not supported */
@@ -169,11 +174,18 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: auto 30%;
+    grid-template-columns: 70% 30%;
+    transition: all .5s ease-in-out;
 }
-
+main.xxx {
+  grid-template-columns: 100% 0%;
+}
 .no-cssgrid main .content {
     width: 70%;
+    /* force width if css grids are not supported */
+}
+.no-cssgrid main .content.xxx {
+    width: 100%;
     /* force width if css grids are not supported */
 }
 
