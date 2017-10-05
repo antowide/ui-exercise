@@ -31,7 +31,7 @@ The header section should contain a navigation bar with three links:
 - Home ( index.html )
 - About ( /about )
 - Blog ( /blog )
-    
+
 Exercise #2
 -----------
 Style the header in whatever way you think suits.
