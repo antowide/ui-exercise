@@ -55,12 +55,7 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
 }
 
@@ -96,106 +91,157 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 body {
-  background: pink;
+    background: #fff;
 }
+
 .main-header {
-  background: #fff;
-  border-bottom: 2px solid #ccc;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
 }
+
 .main-header .logo {
-  background: rgba(178,76,237,.2);
-  padding: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 11px;
-  border-radius: 10px;
-  margin: 10px;
-  display: inline-block;
-  font-family: arial, sans-serif;
-  transition: all .5s ease-in-out;
-  color: #666;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.5);
-  border: 1px solid rgba(0,0,0,.2);
-  letter-spacing: 1px;
+    background: rgba(178, 76, 237, .2);
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;
+    font-family: arial, sans-serif;
+    transition: all .5s ease-in-out;
+    color: #666;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .2);
+    letter-spacing: 1px;
 }
-.main-header .logo:hover,
-.main-header .logo:focus {
-  background: rgba(178,76,237,.5);
-  box-shadow: 10px 10px 10px 1px rgba(0,0,0,.3);
-  transform: scale(1.1);
-  color: #000;
+
+.main-header .logo:hover, .main-header .logo:focus {
+    background: rgba(178, 76, 237, .5);
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, .3);
+    transform: scale(1.1);
+    color: #000;
 }
+
 .main-nav {
-  display: inline-block;
+    display: inline-block;
 }
+
 .main-nav ul {
-  padding-left: 0;
+    padding-left: 0;
 }
+
 .main-nav li {
-  display: inline-block;
-  background: silver;
-  margin-left: 5px;
-  padding: 0;
+    display: inline-block;
+    background: silver;
+    margin-left: 5px;
+    padding: 0;
 }
+
 .main-nav li a {
-  padding: 5px 10px;
-  display: block;
-  background: rgba(255,255,255,.8);
-  font-family: arial, sans-serif;
-  font-size: 11px;
-  text-decoration: none;
-  transition: all .2s ease-in-out;
-  color: #666;
-  border-bottom: 2px solid rgba(175,74,233,.2);
+    padding: 5px 10px;
+    display: block;
+    background: rgba(255, 255, 255, .8);
+    font-family: arial, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    color: #666;
+    border-bottom: 2px solid rgba(175, 74, 233, .2);
 }
-.main-nav li a:hover,
-.main-nav li a:focus {
-  text-decoration: none;
-  background: rgba(255,255,255,1);
+
+.main-nav li a:hover, .main-nav li a:focus {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 1);
 }
+
 .main-nav li a.active {
-  font-weight: bold;
-  border-bottom: 2px solid rgba(175,74,233,1);
+    font-weight: bold;
+    border-bottom: 2px solid rgba(175, 74, 233, 1);
 }
+
 .no-cssgrid main {
-  display: flex; /* flex fallback if css grids are not supported */
+    display: flex;
+    /* flex fallback if css grids are not supported */
 }
+
 main {
-  background: aqua;
-  display: grid;
-  grid-template-columns: auto 30%;
+    display: grid;
+    grid-template-columns: auto 30%;
 }
+
 .no-cssgrid main .content {
-  width: 70%; /* force width if css grids are not supported */
+    width: 70%;
+    /* force width if css grids are not supported */
 }
+
 main .content {
-  background: orange;
-  min-height: 200px;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 20px;
+}
+.content a.link-wrapper {
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+}
+.content .link-wrapper:hover,
+.content .link-wrapper:focus {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,.2);
+}
+.content .block-link {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: normal;
+}
+
+.no-cssgrid .content .block-link {
+    display: inline-block;
+    width: 30%;
+    min-height: 250px;
+    vertical-align: top;
+    margin: 10px 1.1%;
+}
+
+.content .block-link img {
+    width: 100%;
+}
+
+.content .heading {
+    font-family: 'Merriweather', serif;
+    margin: 10px 0 0;
+    font-weight: 300;
+    font-size: 21px;
+    /*word-break: break-all;*/
+    hyphens: auto;
+    color: rgba(119,119,119,1);
+}
+.content .copy {
+  color: #9d9d9d;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
 .no-cssgrid main .sidebar {
-  width: 30%; /* force width if css grids are not supported */
+    width: 30%;
+    /* force width if css grids are not supported */
 }
+
 main .sidebar {
-  background: lime;
+    background: #eee;
 }
+
 .page-footer {
-  background: purple;
+    border-top: 1px solid #ccc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
@@ -229,7 +275,8 @@ main .sidebar {
     padding: 0;
     position: absolute;
     width: 1px;
-    white-space: nowrap; /* 1 */
+    white-space: nowrap;
+    /* 1 */
 }
 
 /*
@@ -238,8 +285,7 @@ main .sidebar {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     -webkit-clip-path: none;
     clip-path: none;
@@ -271,10 +317,11 @@ main .sidebar {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -291,10 +338,7 @@ main .sidebar {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -305,71 +349,52 @@ main .sidebar {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
-
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
